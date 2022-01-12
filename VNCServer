@@ -107,20 +107,20 @@ function FORCED_REBOOT {
 }
 
 function REBOOT_FOLLOWS {
-  dialog --backtitle "Installing VNC-Server on OSMC" \
+  dialog --backtitle "Instalare ServerVNC pe OSMC" \
          --infobox "Reboot follows" \
          5 20
 }
 
 function DONE {
-  dialog --backtitle "Installing VNC-Server on OSMC" \
+  dialog --backtitle "Instalare ServerVNC pe OSMC" \
          --infobox "Done" \
          5 20
   sleep 0.5
 }
 
 function EXIT {
-  dialog --backtitle "Installing VNC-Server on OSMC" \
+  dialog --backtitle "Instalare ServerVNC pe OSMC" \
          --infobox "Exit" \
          5 20
   sleep 0.5
@@ -373,7 +373,7 @@ function CONFIG () {
 }
 
 function MENU {
-  menu_options=("1" "OSMC Update al Sistemului (cu reboot fortat)"
+  menu_options=("1" "Update al Sistemului OSMC (cu reboot fortat)"
                 "2" "Instalare Server VNC "
                 "3" "Eliminare Server VNC"
                 "4" "Updatare Server VNC(obligatorie dupa un update de kernel)"
@@ -390,12 +390,12 @@ function MENU {
   fi
   
   # Store data to $VALUES variable
-  VALUE=$(dialog --backtitle "Installing VNC-Server on OSMC" \
+  VALUE=$(dialog --backtitle "Instalarea serverului VNC pe OSMC" \
          --title "" \
          --stdout \
          --no-tags \
-         --cancel-label "Quit" \
-         --menu "Choose a Option" 17 57 9 "${menu_options[@]}"
+         --cancel-label "Iesire" \
+         --menu "Alege o optiune" 17 57 9 "${menu_options[@]}"
   )
   response=$?
   
