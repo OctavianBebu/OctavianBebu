@@ -373,20 +373,20 @@ function CONFIG () {
 }
 
 function MENU {
-  menu_options=("1" "OSMC System-Update (with forced reboot)"
-                "2" "Install VNC Server and Service"
-                "3" "Remove VNC Server and Service"
-                "4" "Update VNC Server (mandatory after a kernel update)"
-                "5" "Change VNC Configuration"
-                "6" "Start VNC (manual, not Service)"
-                "7" "Stop VNC (manual, not Service)"
-                "8" "Activate VNC Service"
-                "9" "Deactivate VNC Service")
+  menu_options=("1" "OSMC Update al Sistemului (cu reboot fortat)"
+                "2" "Instalare Server VNC "
+                "3" "Eliminare Server VNC"
+                "4" "Updatare Server VNC(obligatorie dupa un update de kernel)"
+                "5" "Schimbarea configuratie VNC"
+                "6" "Pornire VNC (manual)"
+                "7" "Oprire VNC (manual)"
+                "8" "Activare Serviciu VNC"
+                "9" "Dezactivare Serviciu VNC")
   
   if grep -q 'dtoverlay=vc4' '/boot/config.txt';
   then
-    menu_options+=("A" "Activate fake-KMS driver"
-                   "B" "Activate KMS driver")
+    menu_options+=("A" "Activare fake-KMS driver"
+                   "B" "Activare KMS driver")
   fi
   
   # Store data to $VALUES variable
